@@ -26,13 +26,14 @@ with tab2:
     st.write(f"Mittelwert der Leistung: {mean_power:.2f} Watt")
     st.write(f"Maximalwert der Leistung: {max_power:.2f} Watt")
 
-    # Interaktiven Plot erstellen
-    fig = interactive_plot(df)
-    st.plotly_chart(fig)
 
   
    # if st.button("Analyse durchführen"):
     df, zones = calculate_zones(df, max_hr)
+  # Interaktiven Plot erstellen
+    fig = interactive_plot(df,zones)
+    st.plotly_chart(fig)
+
     time_in_zones = calculate_time_in_zones(df, zones)
     avg_power_in_zones = calculate_avg_power_in_zones(df, zones)
 
