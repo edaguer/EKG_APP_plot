@@ -43,3 +43,5 @@ def calculate_avg_power_in_zones(df, zones):
         avg_power_in_zone = df[df[zone] == 1]["PowerOriginal"].mean()
         avg_power_in_zones[zone] = round(avg_power_in_zone, 2)
     return avg_power_in_zones
+
+#Fünf Zonen der Heart-Rates in Farben darstellen
