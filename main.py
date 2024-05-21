@@ -60,9 +60,9 @@ sg
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-#from analyze_activity import load_data, calculate_mean_max, create_interactive_plot, calculate_zones, calculate_avg_power_in_zones
+from analyze_activity import load_data, calculate_mean_max, interactive_plot, calculate_zones, calculate_avg_power_in_zones
 
-# Hilfsfunktionen
+"""# Hilfsfunktionen aus analyze_activity
 def load_data():
     df = pd.read_csv("activity.csv")
     return df
@@ -93,7 +93,7 @@ def calculate_time_in_zones(df, max_hr):
 def calculate_avg_power_in_zones(df, zones):
     avg_power_in_zones = {zone: df[df[zone] == 1]["PowerOriginal"].mean() for zone in zones}
     return avg_power_in_zones
-
+"""
 st.title("Leistungstest Analyse")
 
 tab1, tab2 = st.tabs(["EKG-Data", "Power-Data"])
