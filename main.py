@@ -28,7 +28,7 @@ with tab2:
 
 
   
-   # if st.button("Analyse durchführen"):
+   # if st.button("Analyse durchführen"): #Button erstellen
     df, zones = calculate_zones(df, max_hr)
   # Interaktiven Plot erstellen
     fig = interactive_plot(df,zones)
