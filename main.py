@@ -23,8 +23,8 @@ with tab2:
 
     # Mittelwert und Maximalwert der Leistung berechnen
     mean_power, max_power = calculate_mean_max(df)
-    st.write(f"Mittelwert der Leistung: {mean_power:.2f} Watt")
-    st.write(f"Maximalwert der Leistung: {max_power:.2f} Watt")
+    st.write(f"Der Mittelwert der Leistung beträgt: {mean_power:.2f} Watt")
+    st.write(f"Der Maximalwert der Leistung beträgt: {max_power:.2f} Watt")
 
 
   
