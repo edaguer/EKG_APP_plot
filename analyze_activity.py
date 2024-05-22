@@ -13,10 +13,10 @@ def calculate_mean_max(df):
 
 def interactive_plot(df, zones):
     df["Time_in_Seconds"] = df.index
-    fig = px.line(df, x="Time_in_Seconds", y=["PowerOriginal", "HeartRate"], title="Time in Seconds")
+    
    
 # Konvertiere den Figure in ein `plotly.graph_objects`-Objekt, um zusätzliche Anpassungen vorzunehmen
-    fig = go.Figure(fig)
+    fig = go.Figure()
 
     fig.add_trace(go.Scatter(x=df["Time_in_Seconds"], y=df["PowerOriginal"],
                              mode='lines', name='Power (Watts)',
@@ -27,15 +27,16 @@ def interactive_plot(df, zones):
                              mode='lines', name='Heart Rate (BPM)',
                              yaxis='y2'))
 
-   #skala auf der rechtenseit
+   #Skala auf beiden Seiten
     fig.update_layout(
         title="Power and Heart Rate over Time",
         xaxis=dict(title='Time (seconds)'),
-        yaxis=dict(title='Power (Watts)', titlefont=dict(color='#1f77b4'),
-                   tickfont=dict(color='#1f77b4')),
-        yaxis2=dict(title='Heart Rate (BPM)', titlefont=dict(color='#ff7f0e'),
-                    tickfont=dict(color='#ff7f0e'),
-                    anchor='x', overlaying='y', side='right')
+        yaxis=dict(title='Power (Watts)', titlefont=dict(color='darkblue'),
+                   tickfont=dict(color='darkblue'),range=[0,400]),
+        yaxis2=dict(title='Heart Rate (BPM)', titlefont=dict(color='lightblue'),
+                    tickfont=dict(color='lightblue'),range=[0,400],
+                    anchor='x', overlaying='y', side='right'),
+        legend=dict(x = 1.1, y = 1) #Legende weiter rechts positionieren
     )
 
     #add zone 1
@@ -81,4 +82,4 @@ def calculate_avg_power_in_zones(df, zones):
         avg_power_in_zones[zone] = round(avg_power_in_zone, 2)
     return avg_power_in_zones
 
-#Fünf Zonen der Heart-Rates in Farben darstellen
+
