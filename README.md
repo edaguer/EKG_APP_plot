@@ -28,15 +28,16 @@ pip install -r requirements.txt
 
 ```ruby
    streamlit run main.py
-
+```
 
 4. Geben Sie im Tab "Power-Data" die maximale Herzfrequenz ein und analysieren Sie die Ergebnisse.
 
 ### Beispiel
-Screenshot:
+![Screenshot1](screenshot_1.png)
+![Screenshot1](screenshot_2.png)
 
 ## Feedback 🗣️
-Falls Sie Probleme beim Installieren oder Verwenden der Anwendung haben oder Verbesserungsvorschläge haben, zögeren Sie nicht, ein Issue im Repository zu öffnen oder eine E-Mail an: ag@mci4me.at oder an: ge7045@mci4me.at zu senden.
+Falls Sie Probleme beim Installieren oder Verwenden der Anwendung haben oder Verbesserungsvorschläge haben, zögeren Sie nicht, ein Issue im Repository zu öffnen oder eine E-Mail an: ag9716@mci4me.at oder an: ge7045@mci4me.at zu senden.
 
 **_Viel Spaß beim Experimentieren!_** 🦾 💻 📈
 
