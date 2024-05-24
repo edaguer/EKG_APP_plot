@@ -30,7 +30,8 @@ with tab2:
   
    # if st.button("Analyse durchführen"): #Button erstellen
     df, zones = calculate_zones(df, max_hr)
-   # Interaktiven Plot erstellen
+    
+  # Interaktiven Plot erstellen
     fig = interactive_plot(df,zones)
     st.plotly_chart(fig)
 
