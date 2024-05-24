@@ -54,7 +54,8 @@ def interactive_plot(df, zones):
     fig.update_layout(legend_title="Legend") #Titel für Legende
     
     return fig
-#Berechnung der Herzfrequenzzonen basierend auf dem macimalen Herzfrequenzwert
+
+#Berechnung der Herzfrequenzzonen basierend auf dem maximalen Herzfrequenzwert
 def calculate_zones(df, max_hr):
     zones = {
         "Zone 1": (0.5 * max_hr, 0.6 * max_hr),
